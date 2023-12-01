@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewreport" content="width=device-width, initial-scale=1.0">
+	<marquee>
+	<title>
+		UPUL
+	</title>
+	</marquee>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Amaranth&family=Changa:wght@600&family=Radley&family=Rubik:wght@300&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+	<style>	
+	.overlay 
+	{
+	  position: absolute;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  background-color: #242323;
+	  overflow: hidden;
+	  width: 100%;
+	  height:15%;
+	  -webkit-transform: scale(0);
+	  -ms-transform: scale(0);
+	  transform: scale(0);
+	  -webkit-transition: .3s ease;
+	  transition: .3s ease;
+	}
+
+	.container:hover .overlay 
+	{
+	  -webkit-transform: scale(1);
+	  -ms-transform: scale(1);
+	  transform: scale(1);
+	}
+
+	div.item 
+	{
+	  position: relative;
+	  float: left;
+	  overflow: hidden;
+	  margin: 1px 1%;
+	  width: 100%;
+	  background: #181717;
+	  text-align: center;
+	  font-size: 0.6cm;
+	  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+	}
+		  
+	div.item * 
+	{
+	box-sizing: border-box;
+	}
+		  
+	div.item img 
+	{
+	 max-width: 100%;
+	 vertical-align: top;
+	 height: 355px;
+	}
+		  
+	div.item i 
+	{
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 border-radius: 50%;
+	 font-size: 34px;
+	 color: #000000;
+	 width: 60px;
+	 height: 60px;
+	 line-height: 60px;
+	 background: #ffffff;
+	}
+		  
+	div.item a 
+	{
+	 left: 0;
+	 right: 0;
+	 top: 0;
+	 bottom: 0;
+	 position: absolute;
+	}
+
+		  
+	div.item:hover img 
+	{
+	 opacity: 0.3;
+	 filter: grayscale(100%);
+	}
+		  
+	div.item * 
+	{
+	 transition:all .5s ease-in-out;
+	}
+		  
+	div.item i 
+	{
+	 transform: translate(-50%, -50%) scale(0);
+	 transition: transform 1s 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+	}
+		  
+	div.item:hover i 
+	{
+	 transform: translate(-50%, -50%) scale(1);
+	 transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+
+	.container 
+	{
+	  display: flex;
+	  width: 100%;
+	  padding: 2% 2%;
+	  box-sizing: border-box;
+	  height: 55vh;
+	}
+
+	.box {
+	  flex: 1;
+	  overflow: hidden;
+	  transition: .5s;
+	  margin: 0 2%;
+	  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+	  line-height: 0;
+	}
+
+	.box > img {
+	  width: 100%;
+	  height: calc(100% - 10vh);
+	  object-fit: cover; 
+	  transition: .5s;
+	}
+
+	.box > span {
+	  font-size: 3.8vh;
+	  display: block;
+	  text-align: center;
+	  height: 10vh;
+	  line-height: 2.6;
+	}
+
+	.box:hover { flex: 1 1 50%; }
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container-fluid banner">
+		<div class="row">
+			<div class="col-md-12">
+				<nav class="navbar navbar-md">
+					<div class="navbar-brand";><a href="index.html" style="color: white;"> <b><img src="images/logo.png"  width="80" height="50"><b>Studio SACHITHRA</a>  </div>
+					<ul class="nav" >
+						<li class="nav-item">
+							<a class="nav-link" href="index.html"><i class="fas fa-home home"></i> HOME</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="gellery.html"><i class="fa fa-globe"></i> GELLERY</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="services.html"><i class="fa fa-search"></i>SERVICES</a> 
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.html"><i class="fas fa-align-left about"></i> ABOUT US</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="contact.php"><i class="fa fa-fw fa-envelope"></i> CONTACT</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+			<div class="col-md-8 offset-md-2 info">
+				
+				<h1 class="text-center">
+					GELLERY
+					
+				</h1>
+
+		   </div>
+	</div>
+	
+<br/>
+<br/>
+
+		
+<div class="container">
+			
+	   <div class="item ">
+	
+		    <img src="images/thankyou/tankyou1.jpg " />
+		    <div class="overlay" id ="Thank">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    <i class="fa fa-search">
+			<br/>
+			<a href="#Thank" ></a></i>
+		</div>
+	
+	    <div class="item ">
+		    <img src="images/wedding.JPG" />
+		    <div class="overlay">
+			   <div class="text" style="color: white; ">Wedding Photos</div>
+		    </div>
+		    <i class="fa fa-search">
+			<br/>
+			<a href="#Wedding" ></a></i>
+	    </div>
+	
+	    <div class="item ">
+		   <img src="images/preshoot.jpg" />
+		   <div class="overlay">
+			 <div class="text" style="color: white;">Pre Shoot</div>
+		   </div>
+		   <i class="fa fa-search">
+		   <br/>
+		   <a href="#Pre" ></a></i>
+	    </div>
+
+	    <div class="item ">
+		    <img src="images/ppt.jpg" />
+		    <div class="overlay">
+			  <div class="text" style="color: white; ">Past Port Photos</div>
+		    </div>
+		    <i class="fa fa-search">
+			<br/>
+			<a href="#Past" ></a></i>
+	    </div>
+	
+</div>
+
+<div class="container">
+	
+        <div class="item">
+		    <img src="images/mug.jpg" />
+		    <div class="overlay">
+			  <div class="text" style="color: white; ">Mug Printing</div>
+		    </div>
+		    <i class="fa fa-search">
+			<br/>
+			<a href="#Mug" ></a></i>
+	    </div>
+	
+	    <div class="item ">
+		    <img src="images/banner.jpg" />
+		    <div class="overlay">
+			   <div class="text" style="color: white;">Banner Ptinting</div>
+		    </div>
+		    <i class="fa fa-search">
+			<br/>
+			<a href="#Banner" ></a></i>
+	    </div>
+
+	    <div class="item ">
+		    <img src="images/print.jpg" />
+		    <div class="overlay">
+			 <div class="text" style="color: white; ">Print out</div>
+		    </div>
+		    <i class="fa fa-search">
+			<br/>
+			<a href="#Print" ></a></i>
+	    </div>
+
+	    <div class="item ">
+		    <img src="images/baby.JPG" />
+		    <div class="overlay">
+			 <div class="text" style="color: white;;">Baby Photos</div>
+		    </div>
+		    <i class="fa fa-search">
+			<br/>
+			<a href="#Baby" ></a></i>
+	    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<div class="container-fluid">
+		  
+			    <div class="row" >
+				  
+				    <div class="col-sm-12" >
+					  <h2>Photography Sri Lanka</h2>
+					  <br/>
+					  
+					  <p>
+					  Studio SACHITHRA is a profeesional wedding photography studio in Polonnaruwa, Sri Lanka.
+					  Studio SACHITHRA founder and photographer U.G.Chaminda Siriwardahana has 20 years' experience 
+					  in wedding photography. We offer wedding photography, wedding videography, commercial photo shoots,
+					  personel portfolio shoots and etc. If you like our work and feel you would like to meet and discuss
+					  your wedding, or if you have any questions you would like to ask, please contact me via the contact
+					  page and I will contact you shortly..
+					  </p>
+				    </div>
+			    </div>
+</div>
+		<br/>
+		<br/>
+		<br/>
+		<hr/>	
+		<br/>
+        <br/>
+	    <br/>
+		<h2 id="Thank" >Thank You Card</h2>
+		<br/>
+
+
+
+		
+		  
+			
+	   <div class=" container-fluid" >
+		    <div class="row">
+				<br/>
+				<div class="col-sm-4"  >
+					<hr/>
+					<div class="GalleryBoxPanel >
+					<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou1.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou2.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="https://studiosahan.com/thank-you-cards/">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou3.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou4.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+			</div>
+				
+					
+									<br/>
+				<div class="col-sm-4" >
+					<hr/>
+					<div class="GalleryBoxPanel" style="color: white;;">
+					<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou5.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou6.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou7.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou8.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+			</div>
+			
+			<br/>
+				<div class="col-sm-4" >
+					<hr/>
+					<div class="GalleryBoxPanel" style="color: white;;">
+					<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou9.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou1.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="https://studiosahan.com/thank-you-cards/">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/tankyou5.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+		
+			<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Thank"><img width="80%" height="80%" src="images/thankyou/thankyou.jpg">
+			<h4>Thank You Cards</h4>
+		</a></div>
+		
+		
+			</div>
+			
+			
+			
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+		
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				<br/>
+				<br/></div>
+			
+		<br/>
+		<h2 id="Thank" >Wedding Photos</h2>
+		<br/>
+		<br/>
+		<br/>
+		<br/>		
+		<br/>
+        <br/>
+	    <br/>	
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+	
+		<div class="col-sm-4" >
+		</div>
+
+		<div class="container">
+		
+		    <img src="images/weding/01/gallary1.jpg" />
+		    <div class="overlay" id ="Thank">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/weding/01/gallary2.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/01/gallary3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/01/gallary4.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/01/gallary5.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/weding/01/gallary6.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/weding/01/gallary7.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/01/gallary8.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/01/gallary9.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/01/gallary10.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/weding/01/gallary11.jpg">
+					
+				  </div>
+		</div>
+		
+		
+		
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/weding/02/weding10.jpg" />
+		    <div class="overlay" id ="Thank">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/weding/02/weding9.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/02/weding2.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/02/weding3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/02/weding4.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/weding/02/weding5.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/weding/02/weding00.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/02/weding6.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/02/weding7.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/02/weding8.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/weding/02/weding10.jpg">
+					
+				  </div>
+		</div>
+		
+		
+		
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				></div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/weding/03/wdn3.jpg" />
+		    <div class="overlay" id ="Thank">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/weding/03/wdn1.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/03/wdn2.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/03/wdn3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/03/wdn4.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/weding/03/wdn5.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/weding/03/wdn6.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/03/wdn7.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/03/wdn8.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/03/wdn5.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/weding/03/wdn8.jpg">
+					
+				  </div>
+		</div>
+		
+		
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/weding/05/wd1.jpg" />
+		    <div class="overlay" id ="Thank">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/weding/05/wd2.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/05/wd3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/05/wd4.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/05/wd5.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/weding/05/wd6.jpg">
+				
+			</div>
+			
+			
+		</div>
+		
+		
+		00000000000000000000000000000
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/weding/04/wdd1.jpg" />
+		    <div class="overlay" id ="Thank">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/weding/04/wdd2.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/04/wdd3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/04/wdd4.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/weding/04/wdd6.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/weding/04/wdd7.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/weding/04/wdd8.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/04/wdd9.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/04/wdd10.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/weding/04/wdd11.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/weding/04/wdd12.jpg">
+					
+				  </div>
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		11111111111111111111111111
+		
+		
+	 
+			<div class=" container-fluid" >
+				<div class="row">
+					<br/>
+					<br/></div>
+
+        <br/>
+        <hr/>
+		<hr/>	
+		<br/>
+        <br/>
+	    <br/>
+		<h2 id="Pre" >Pre shoot</h2>
+		<br/>
+		<br/>
+
+		<div class="container">
+		
+		    <img src="images/preshoot/01/pre1.jpg"/>
+		    <div class="overlay" id ="#Pre">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		   
+			
+			<div class="box">
+				<img src="images/preshoot/01/pre6.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+			  <img src="images/preshoot/01/pre2.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/01/pre3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/01/pre4.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/01/pre5.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/preshoot/01/pre7.jpg">
+				
+			  </div>
+		</div>
+
+		111111111111111111111111111111
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/preshoot/02/pree2.jpg"/>
+		    <div class="overlay" id ="#Pre">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/preshoot/02/pree1.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/02/pree02.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/02/pree01.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/02/pree2.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/preshoot/02/pree3.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/preshoot/02/pree4.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/02/pree5.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/02/pree6.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/02/pree7.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/preshoot/02/pree8.jpg">
+					
+				  </div>
+		</div>
+		
+		111111111111111111111111111111
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/preshoot/03/pree1.jpg"/>
+		    <div class="overlay" id ="#Pre">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/preshoot/03/pree11.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/03/pree2.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/03/pree3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/03/pree4.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/preshoot/03/pree5.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/preshoot/03/pree6.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/03/pree7.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/03/pree8.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/03/pree9.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/preshoot/03/pree10.jpg">
+					
+				  </div>
+		</div>
+		
+		
+		
+		
+		111111111111111111111111111111
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/preshoot/04/pree1.jpg" />
+		    <div class="overlay" id ="#Pre">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/preshoot/04/pree2.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/04/pree3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/04/pree4.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/04/pree5.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/preshoot/04/pree6.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/preshoot/04/pree7.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/04/pree8.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/04/pree9.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/04/pree10.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/preshoot/04/pree1.jpg">
+					
+				  </div>
+		</div>
+		
+		
+		111111111111111111111111111111
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/preshoot/05/pree1.jpg"/>
+		    <div class="overlay" id ="#Pre">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/preshoot/05/pree2.jpg">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/05/pree3.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/05/pree4.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/05/pree5.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/preshoot/05/pree6.jpg">
+				
+			</div>
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+				  <img src="images/preshoot/05/pree7.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/05/pree8.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/05/pree9.jpg">
+				  
+				</div>
+				<div class="box">
+				  <img src="images/preshoot/05/pree10.jpg">
+				  
+				</div>
+				<div class="box">
+					<img src="images/preshoot/05/pree11.jpg">
+					
+				  </div>
+		</div>
+		
+		
+		
+		111111111111111111111111111111
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+			
+
+		
+		
+		
+		<div class="col-sm-4" >
+		</div>
+		
+		
+		
+        
+
+		<div class="container">
+		
+		    <img src="images/preshoot/06/pree2.jpg " />
+		    <div class="overlay" id ="#Pre">
+			    <div class="text" style="color: white; ">Thank You Card</div>
+		    </div>
+		    
+		    <div class="box">
+			  <img src="images/preshoot/06/pree1.jpg ">
+			  
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/06/pree2.jpg ">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/06/pree2.jpg ">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/preshoot/06/pree3.jpg ">
+			  
+			</div>
+			<div class="box">
+				<img src="images/preshoot/06/pree4.jpg ">
+				
+			</div>
+			
+			
+		</div>
+	
+		
+		
+		111111111111111111111111111111
+		00000000000000000000000000000
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>		
+		<br/>
+        <br/>
+	    <br/>	
+			
+			
+			<div class=" container-fluid" >
+		    <div class="row">
+				</div>
+		
+		
+
+			</div>
+	    </div>
+
+       
+
+        
+
+        <br/>
+		<br/>
+		<br/>
+		<hr/>	
+		<br/>
+        <br/>
+	    <br/>
+		<h2 id="Past" >Past Port Photos</h2>
+		<br/>
+		<br/>
+
+		<div class="container">
+			<div class="box">
+			  <img src="images/passp/ppt.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/passp/ppt.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/passp/ppt1.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/passp/ppt2.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/passp/ppt4.jpg">
+				
+			  </div>
+		</div>
+ 
+	   
+
+		000000000000000000000000000000000
+
+		11111111111111111111111111
+		
+		
+	 
+			<div class=" container-fluid" >
+				<div class="row">
+					<br/>
+					<br/></div>
+
+        <br/>
+        <hr/>
+		<hr/>	
+		<br/>
+        <br/>
+	    <br/>
+		<h2 id="Mug" >Mug Printing</h2>
+		<br/>
+		<br/>
+
+		<div class="container">
+			<div class="box">
+			  <img src="images/mug/mug.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/mug/mug1.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/mug/mug2.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/mug/mug3.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/mug/mug4.jpg">
+				
+			  </div>
+		 
+			
+			
+		</div>
+		<div class="container">
+			
+				<div class="box">
+			  <img src="images/mug/mug5.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/mug/mug6.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/mug/mug7.jpg">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/mug/mug8.jpg">
+			  
+			</div>
+			<div class="box">
+				<img src="images/mug/mug9.jpg">
+				
+			  </div>
+		</div>
+
+		<br/>
+		<br/>
+
+		000000000000
+
+        <br/>
+		<br/>
+		<br/>
+		<hr/>	
+		<br/>
+        <br/>
+	    <br/>
+		<h2 id="Banner" >Banner & stiker printing</h2>
+		<br/>
+		<br/>
+
+		<div class="container">
+			<div class="box">
+			  <img src="images/">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/">
+			  
+			</div>
+			<div class="box">
+			  <img src="images/">
+			  
+			</div>
+			<div class="box">
+				<img src="images/">
+				
+			  </div>
+		</div>
+ 
+	
+
+		<br/>
+		<br/>
+
+		
+
+        <br/>
+		<br/>
+		<br/>
+		<hr/>
+		<hr/>	
+		<br/>
+        <br/>
+	    <br/>
+		<h2 id="Print" >Print out</h2>
+		<br/>
+		<br/>
+
+		
+ 
+	    <div class=" container-fluid" >
+		    <div class="row">
+				<br/>
+				<div class="col-sm-6">
+					<hr/>
+					<br/>
+					<h3 style="color: white">Print out</h3>
+					<br/>
+					<p style="text-align: justify;">
+						 you can get any photocoppies in our center
+					</p>
+					<br/>
+						<i class="fas fa-flag" style="font-size:18px;color:rgb(235, 114, 16)"> Srilanka</i>  
+						<i class="fa fa-map-marker" style="font-size:18px;color:rgb(235, 114, 16)">you can sech in our location in below locatoin map</i>
+						
+						</div>
+				<div class="col-sm-6">
+					<br/>
+					<br/>
+					<iframe width="600" height="315" src="####" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+	    </div>
+
+		<br/>
+		<br/>
+	 
+	    
+
+        <br/>
+		<br/>
+		<br/>
+		<hr/>	
+		<hr/>	
+		<br/>
+        <br/>
+	    <br/>
+		<h2 id="Baby" >Baby Photos</h2>
+		<br/>
+
+
+
+		
+		  
+			
+	   <div class=" container-fluid" >
+		    <div class="row">
+				<br/>
+				<div class="col-sm-4"  >
+					<hr/>
+					<div class="GalleryBoxPanel" style="color: white;;">
+			<a href="#Baby"><img width="80%" height="80%" src="images/baby/baby1.jpg">
+			<h4>Baby Photos</h4>
+		</a></div>
+		
+			</div>
+				
+					
+									<br/>
+				<div class="col-sm-4" >
+					<hr/>
+					<div class="GalleryBoxPanel" style="color: white;;">
+					<a href="#Baby"><img width="80%" height="80%" src="images/baby/baby5.jpg">
+			<h4>Baby Photos</h4>
+		</a></div>
+		
+		
+		
+		
+			</div>
+			
+			<br/>
+				<div class="col-sm-4" >
+					<hr/>
+					<div class="GalleryBoxPanel" style="color: white;;">
+					<a href="#Baby"><img width="80%" height="80%" src="images/baby/baby4.jpg">
+			<h4>Baby Photos</h4>
+		</a></div>
+		
+
+		
+		
+			</div>
+			
+			
+			
+		<br/>
+		<br/>
+		<br/>
+		
+		<hr/>
+		<hr/>
+	
+	    
+
+	                <br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+	<div class="footer">
+		<br/>
+		 <br/>
+		 <div class="container-fluid">
+			 <div class="row">
+				<div class="col-sm-3"><i class="fa fa-address-card" style="font-size:22px;color:red"></i>
+				<br/>Girithale road , Diyabeduma <br/>Polonnaruwa<br/> <br/> Sri Lanka
+				<br/>
+				<br/>
+				 <i class="fa fa-phone" style="font-size:20px; color:red"></i>
+				<br/>027-2050050 / 0 771333234 
+				<br/>
+				<br/>
+				 <i class="fa fa-envelope" style="font-size:20px; color: red;"></i>
+				<br/>studiosachithra@gmail.com  
+				<br/>
+				<br/>
+				 
+			    </div>
+			
+			    <div class="col-sm-3">
+					<h3 style="color:red ;">Quick Link</h3>
+					<br/>
+					<p><a href="index.html" style="color: white;"><i class="fas fa-home home"></i> HOME</a></p>
+					
+					<p><a href="gellery.html"style="color: white;"><i class="fa fa-globe"></i> GELLERY</a></p>
+					
+					<p><a href="services.html"style="color: white;"><i class="fa fa-search"></i>SERVICES</a></p>
+						
+						<p><a href="about.html"style="color: white;"><i class="fas fa-align-left about"></i> ABOUT US</a></p>
+				
+					<p><a href="contact.html"style="color: white;"><i class="fa fa-fw fa-envelope"></i> CONTACT</a></p>
+	            </div>
+				<div class="col-sm-3">
+					<h3 style="color:red;">OUR SERVICES</h3>
+                    <br/>
+					<p style="font-size: 0.5cm;"><a href="services.html" style="color: yellow;"><i class="fa fa-map-marker"> </i> Artistic color and black and white photos </a></p>
+					
+					<p style="font-size: 0.5cm;"><a href="services.html"style="color: yellow;"><i class="fa fa-map-marker"> </i> Pictures are great</a></p>
+					
+					<p style="font-size: 0.5cm;"><a href="services.html"style="color: yellow;"><i class="fa fa-map-marker"> </i> Photocopying, laminating, binding</a></p>
+						
+					<p style="font-size: 0.5cm;"><a href="services.html"style="color: yellow;"><i class="fa fa-map-marker"> </i> Type setting, color printout</a></p>
+					
+				</div>
+				<div class="col-sm-3">
+					<h3 style="color:red ;">OUR SERVICES</h3>
+                    <br/>
+					<p style="font-size: 0.5cm;"><a href="services.html" style="color: yellow;"><i class="fa fa-map-marker"> </i> Digital Printing (Stickers, Banners)</a></p>
+					<p style="font-size: 0.5cm;"><a href="services.html"style="color: yellow;"><i class="fa fa-map-marker"> </i> All printing works</a></p>
+					<p style="font-size: 0.5cm;"><a href="services.html"style="color: yellow;"><i class="fa fa-map-marker"> </i> Mug Printing</a></p>	
+					<p style="font-size: 0.5cm;"><a href="services.html"style="color: red;"><i class="fa fa-map-marker"> </i> Vehicle Insurance Certificates</a></p>
+					<p style="font-size: 0.5cm;"><a href="services.html"style="color: red;"><i class="fa fa-map-marker"> </i> Online Vehicle Revenue Permits</a></p>
+				</div>
+				</div>
+				<div class="row mt-5">
+		      <div class="col-sm-12">
+					<br/>
+					<br/> 
+					<h3 style="color:red";>ABOUT HAPPY TOURS</h3>
+					<p style="font-size: 0.5cm;">
+						<br/>
+					"...........We support a customer with friendly relationship to bring you ultimate satisfaction & We provide customer service with customer satisfaction in mind..Our vission is to become the best and most trusted photograpy studio in the worlds..........." 
+					</p>
+				</div>
+				<div class="col-sm-12">
+					<a  href="https://www.google.com/search?q=facebook&oq=facebook+&aqs=chrome..69i57j69i59j0i131i433i512l2j69i60l4.18389j0j9&sourceid=chrome&ie=UTF-8">
+						<img src="images/icon1.png" height="" width="10%">
+					</a>
+					<a  href="https://www.google.com/search?q=instagram&sxsrf=AOaemvJcQ21EXY44Iw6L47nbWQxlFXd_fQ%3A1642317099362&ei=K8XjYb3QFcvA3LUP8cmOoA8&oq=in&gs_lcp=Cgdnd3Mtd2l6EAEYATIECCMQJzIKCAAQsQMQgwEQQzIECAAQQzIKCAAQsQMQgwEQQzIECAAQQzIECAAQQzIECAAQQzILCAAQgAQQsQMQgwEyBQgAEIAEMggIABCABBCxAzoHCCMQsAMQJzoHCAAQRxCwAzoHCCMQ6gIQJzoICAAQsQMQgwE6CwguEIAEELEDEIMBOgUILhCABEoECEEYAEoECEYYAFDcEVjUFmCkImgCcAJ4AIABpQGIAbACkgEDMC4ymAEAoAEBsAEKyAEKwAEB&sclient=gws-wiz">
+						<img src="images/icon2.png" height="" width="10%">
+					</a>
+					<a  href="https://www.google.com/search?q=twitter&sxsrf=AOaemvKYzWM7BeXJcD3I4zqvnG2bg9hXpg%3A1642317331075&ei=E8bjYdOGBJbbz7sPt9qLoAo&gs_ssp=eJzj4tLP1TfIyDMsS05XYDRgdGDwYi8pzywpSS0CAFnOB00&oq=t&gs_lcp=Cgdnd3Mtd2l6EAEYAzIECCMQJzIECCMQJzIECCMQJzIQCC4QsQMQgwEQxwEQ0QMQQzIKCAAQsQMQgwEQQzIKCAAQsQMQgwEQQzIECAAQQzIICC4QsQMQgwEyCAguELEDEIMBMggIABCxAxCDAToHCCMQ6gIQJ0oECEEYAEoECEYYAFAAWL8JYN4eaAFwAngAgAGhBYgBoQWSAQM1LTGYAQCgAQGwAQrAAQE&sclient=gws-wiz">
+						<img src="images/icon3.png" height="" width="10%">
+					</a>
+					<a href="https://www.google.com/search?q=linkedin&sxsrf=AOaemvIO6updoVUpJdqARe0V91zSVfReXg%3A1642317367636&ei=N8bjYdanJsTfz7sPoceu0A0&gs_ssp=eJzj4tLP1TcoNzC2MDBVYDRgdGDw4sjJzMtOTcnMAwBRaga5&oq=l&gs_lcp=Cgdnd3Mtd2l6EAEYAzIECCMQJzIECCMQJzIECCMQJzINCC4QsQMQxwEQ0QMQQzILCAAQgAQQsQMQgwEyCAgAELEDEIMBMggIABCxAxCDATILCAAQgAQQsQMQgwEyBQgAEIAEMggILhCxAxCDAToNCC4QxwEQ0QMQ6gIQJzoHCCMQ6gIQJ0oECEEYAEoECEYYAFAAWLYDYIISaAFwAngAgAGXAYgBlwGSAQMwLjGYAQCgAQGwAQrAAQE&sclient=gws-wiz">
+						<img src="images/icon4.png" height="" width="10%">
+					</a>
+			
+			  </div>
+			  
+			  
+			  
+			  </div>
+			  
+			  
+			
+			</div>
+         
+		 </div>
+	
+</body>
+
+</html>

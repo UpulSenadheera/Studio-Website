@@ -1,0 +1,110 @@
+body{
+	margin:0;
+	padding:0;
+	background:rgb(51, 49, 49);
+	font-family: 'Gill Sans MT';
+	color: rgb(27, 25, 25);
+	;
+}
+
+.banner{
+	height: 100vh;
+	width: 100%;
+	background:url('images/overlay.png'),url('images/back.jpg');
+	background-position: top;
+	background-size:cover;
+	/*background-attachment: fixed;*/
+	background-repeat: no-repeat;
+	animation: change 10s infinite ease-in-out;
+    
+	
+}
+
+@keyframes change{
+    0%{
+        background-image:url('images/overlay.png'), url('images/indexback1.jpg');
+    }
+    20%{
+        background-image:url('images/overlay.png'),url('images/indexback2.jpg');
+    }
+    40%{
+        background-image:url('images/overlay.png'),url('images/indexback3.jpg');
+    }
+    60%{
+        background-image: url('images/overlay.png'),url('images/indexback4.jpg');
+    }
+    80%{
+        background-image:url('images/overlay.png'),url('images/indexback5.jpg');
+    }
+    100%{
+        background-image:url('images/overlay.png'),url('images/indexback6.jpg');
+    }
+}
+.navbar{
+	margin-top:1%;
+
+	
+}
+.navbar-brand{
+	color: rgb(250, 245, 245);
+	font-size:2.0em;
+	font-weight: 700;
+	margin-left: 2%;
+	font-family:'Bungee', cursive;
+}
+.nav{
+	margin-right:11%; 
+	
+}
+
+ .nav li a{
+	color:rgb(244, 247, 250);
+	font-size: 0.9em;
+	overflow: auto;
+	font-family:'Oleo Script', cursive;
+	  
+}
+
+.info{
+	margin-top:15%;
+	transform: translateY(-15%);
+}
+.info h1{
+	font-size: 4.7em;
+	font-weight: 700;
+	color: rgb(233, 231, 231);
+	letter-spacing: 2px;
+	font-family: 'Sigmar One', cursive;
+	animation: textanimation 1s ease-in-out;
+}
+@keyframes textanimation{
+	0%{
+		letter-spacing:20px ;
+	}
+	100%{
+		letter-spacing: 1px;
+	}
+}
+.info p{
+	font-size: 1.5em;
+	font-weight: 500;
+	color: rgb(255, 247, 247);
+	letter-spacing: 2px;
+}
+ .info a{
+	margin-left:50%;
+	transform: translateX(-50%);
+	background: #ff0909;
+	padding:20px 20px; 
+	font-size: 2em;
+	font-weight: 600;
+	font-family: 'Limelight', cursive;
+}
+.banner .info a:hover{
+	background: rgb(255, 91, 233);
+}
+
+img:hover {
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+  }
